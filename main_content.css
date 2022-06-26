@@ -1,0 +1,27 @@
+.main_content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.main_content_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.main_content_lines {
+  color: rgb(0, 0, 0);
+}
+
+.reference {
+  color: #302f2f;
+  text-align: end;
+  font-size: 15px;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+}

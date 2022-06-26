@@ -1,0 +1,46 @@
+.landing_page {
+  background-color: black;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.landing_page_column {
+  position: relative;
+}
+
+.landing_page_column_overlay {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.landing_page_profile_photo {
+  border: 20px solid rgb(247, 61, 36);
+  height: 424px;
+}
+
+.typewriter_container {
+  display: flex;
+  justify-content: start;
+  padding: 24px;
+  align-items: center;
+}
+
+.typewriter {
+  align-self: center;
+  position: relative;
+}
+
+.typewriter-typing::after {
+  content: '';
+  background-color: white;
+  width: 4px;
+  height: 116px;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+}
