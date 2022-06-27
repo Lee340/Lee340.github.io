@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 40px 40px;
+  padding: 80px;
 }
 
 .details_page_title {
   font-size: 48px;
+  line-height: 200%;
 }
 
 .details_page_content {
