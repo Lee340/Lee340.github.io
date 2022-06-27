@@ -1,8 +1,23 @@
 .details_page {
   background-color: black;
-  color: white
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px 40px;
+}
+
+.details_page_title {
+  font-size: 48px;
+}
+
+.details_page_content {
+  font-size: 40px;
+  line-height: 150%;
+  text-indent: 16px;
 }
 
 .icons > a {
-  color: white;
+  color: whitesmoke;
+  text-decoration: none;
 }

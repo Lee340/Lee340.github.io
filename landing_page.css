@@ -17,15 +17,10 @@
   transform: translateY(-50%);
 }
 
-.landing_page_profile_photo {
-  border: 20px solid rgb(247, 61, 36);
-  height: 424px;
-}
-
 .typewriter_container {
   display: flex;
   justify-content: start;
-  padding: 24px;
+  padding: 48px;
   align-items: center;
 }
 
