@@ -7,6 +7,11 @@
   padding: 0;
   border: 0;
   font-family: Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 html, body {
@@ -46,7 +51,7 @@ html, body {
 }
 
 .text_s {
-  font-size: 48px;
+  font-size: 36px;
   line-height: 72px;
   text-align: left;
 }
@@ -81,7 +86,6 @@ html, body {
 }
 
 .btn-l {
-  text-decoration: none;
   line-height: 1.6;
   font-size: 32px;
   color: black;
@@ -118,5 +122,14 @@ html, body {
 
 .arrow-down-link > p {
   font-size: 12px;
-  text-decoration: none;
+}
+
+.img-button {
+  border-radius: 8px;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+.img-button > img {
+  display: block;
 }

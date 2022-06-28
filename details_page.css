@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 80px;
+  padding: 48px;
 }
 
 .details_page_title {
@@ -18,7 +18,6 @@
   text-indent: 16px;
 }
 
-.icons > a {
+.icons {
   color: whitesmoke;
-  text-decoration: none;
 }

@@ -3,16 +3,13 @@
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
-.main_page_row {
+.main_page_cell {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  padding: 20px;
   justify-content: center;
+  align-items: center;
 }
 
 .main_page_text {
@@ -26,7 +23,11 @@
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
   border: 1px solid #634f46;
-  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  padding: 12px;
 }
 
 .reference {

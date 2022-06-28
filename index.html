@@ -54,7 +54,9 @@
           node.classList.remove("typewriter-typing")
         }
       </script>
-      <a class="arrow-down-link" href="#section1"><p>scroll</p><i class="fa-solid fa-angle-down"></i></a>
+      <a class="arrow-down-link" href="#section1">
+        <p>scroll</p><i class="fa-solid fa-angle-down"></i>
+      </a>
 
     </div>
     <!------------------------landing page------------------------->
@@ -62,33 +64,43 @@
     <!-------------------------main page--------------------------->
     <div class="page main_page" id="section1" style="background-image: url('images/seobo.jpeg')"
       alt="Ecriture by Seobo Park">
-      <div class="main_page_row">
+      <div class="main_page_cell">
         <p class="text_s main_page_text">I studied<br><strong>web development</strong><br>
           at the coding bootcamp,<br><strong>Le Wagon</strong> London.
         </p>
       </div>
 
-      <div class="main_page_row">
+      <div class="main_page_cell">
         <p class="text_s main_page_text">I also completed <br>my PhD in <strong>art history</strong><br> at the<br>
           <strong>University of Edinburgh</strong>.
         </p>
       </div>
-      <div class="main_page_row main_page_portfolio">
-        <p>First Project</p>
-        <a class="btn-l" href="https://airbnb-lee340.herokuapp.com/" style="background-image: url('images/woof_logo.png')" target="_blank">
-          <!-- <strong>Woofwoof</strong> -->
-        </a>
-        <p>A platform that people could meet up with dogs.</p>
+      <div class="main_page_cell">
+        <div class="main_page_portfolio">
+          <h2>Woof woof</h2>
+          <br>
+          <a class="img-button" href="https://airbnb-lee340.herokuapp.com/" target="_blank">
+            <img height="48" width="92" alt="woof woof logo" src="images/woof_logo.png" />
+          </a>
+          <br>
+          <p>A platform that people could meet up with dogs.</p>
+        </div>
       </div>
-      <div class="main_page_row main_page_portfolio">
-        <p>Second Project</p>
-        <a class="btn-l" href="http://www.planit.lol" style="background-image: url('images/planit_logo.jpg')" target="_blank">
-          <!-- <strong>Planit</strong> -->
-        </a>
-        <p>An web app designed to help people organising team events by voting their availability on calendar.</p>
+      <div class="main_page_cell">
+        <div class="main_page_portfolio">
+          <h2>Planit</h2>
+          <br>
+          <a class="img-button" href="http://www.planit.lol" target="_blank">
+            <img height="48" width="92" alt="planit logo" src="images/planit_logo.jpg" />
+          </a>
+          <br>
+          <p>An web app designed to help people organising team events by voting their availability on calendar.</p>
+        </div>
       </div>
 
-      <a class="arrow-down-link" href="#section2"><p>scroll</p><i class="fa-solid fa-angle-down"></i></a>
+      <a class="arrow-down-link" href="#section2">
+        <p>scroll</p><i class="fa-solid fa-angle-down"></i>
+      </a>
       <div class="reference">
         <p>
           Seobo Park, <em>Ecriture No.080313</em>, 2008, mixed media with Korean paper on canvas, 165cmx260cm, Seobo
@@ -96,36 +108,50 @@
         </p>
       </div>
     </div>
+
     <!--------------------------main page------------------------------->
 
     <!--------------------------details page---------------------------->
     <div class="page details_page" id="section2">
-      <h1 class="details_page_title">More about me</h1>
-      <p class="details_page_content">I started to have growing interest in coding for the last few years and joined the <mark class="accent-color">coding bootcamp</mark> in
-        spring 2022. Before getting into the coding world, I have worked in art industry and studied art history for about
+      <h2 class="details_page_title">More about me</h2>
+      <p class="details_page_content">I started to have growing interest in coding for the last few years and joined the
+        <mark class="accent-color">coding bootcamp</mark> in
+        spring 2022. Before getting into the coding world, I have worked in art industry and studied art history for
+        about
         ten years from undergraduate to PhD.
       </p>
-      <p class="details_page_content">During the bootcamp, I mainly studied <mark class="accent-color">HTML, CSS, JavaScript, Ruby</mark> and <mark class="accent-color">Ruby on Rails</mark> and taught myself <mark class="accent-color">React</mark> and
-        <mark class="accent-color">TypeScript</mark>. I not only have learnt a lot about programming also gained some experience in <mark class="accent-color">teamwork</mark> and how to
+      <p class="details_page_content">During the bootcamp, I mainly studied <mark class="accent-color">HTML, CSS,
+          JavaScript, Ruby</mark> and <mark class="accent-color">Ruby on Rails</mark> and taught myself <mark
+          class="accent-color">React</mark> and
+        <mark class="accent-color">TypeScript</mark>. I not only have learnt a lot about programming also gained some
+        experience in <mark class="accent-color">teamwork</mark> and how to
         cooperate with others for creating a product using different technologies together.
       </p>
+      <br>
 
-      <h1 class="details_page_title">Contact me</h1>
-        <div class="icons details_page_content">
-        <li>Email<a href="https://github.com/Lee340" target="_blank" class="social-icon text_xs">
-          <i class="fa-solid fa-envelope"></i>
-        </a></li>
-        <li>LinkedIn<a href="https://www.linkedin.com/in/boramlee340/" target="_blank" class="social-icon text_xs">
-          <i class="fa-brands fa-linkedin"></i>
-        </a></li>
-        <li>GitHub<a href="https://github.com/Lee340" target="_blank" class="social-icon text_xs">
-          <i class="fa-brands fa-github"></i>
-        </a></li>
-      </div>
+      <h2 class="details_page_title">Contact me</h2>
+      <ul class="details_page_content">
+        <li>
+          boramlee340@gmail.com <i class="fa-solid fa-envelope"></i>
+        </li>
+        <li>
+          LinkedIn
+          <a href="https://www.linkedin.com/in/boramlee340/" target="_blank" class="icons social-icon text_s">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          GitHub
+          <a href="https://github.com/Lee340" target="_blank" class="icons social-icon text_s">
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+      </ul>
     </div>
-    <!--------------------------details page---------------------------->
-
   </div>
+
 </body>
 
 </html>
+
+<!--------------------------details page---------------------------->
