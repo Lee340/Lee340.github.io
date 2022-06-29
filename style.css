@@ -58,7 +58,7 @@ html, body {
 
 .text_xs {
   font-size: 24px;
-  line-height: 72px;
+  line-height: 48px;
   text-align: left;
 }
 
@@ -85,7 +85,7 @@ html, body {
   to   { opacity: 0; }
 }
 
-.btn-l {
+/* .btn-l {
   line-height: 1.6;
   font-size: 32px;
   color: black;
@@ -107,7 +107,7 @@ html, body {
 .btn-l:hover {
   background-color: #fa4e3b;
   text-shadow: 0.5px 0.5px #000000;
-}
+} */
 
 .arrow-down-link {
   padding: 12px;
@@ -124,12 +124,18 @@ html, body {
   font-size: 12px;
 }
 
-.img-button {
-  border-radius: 8px;
+.img-btn {
+  border-radius: 4px;
   border: 2px solid black;
   overflow: hidden;
+  transition: 0.2s ease;
 }
 
-.img-button > img {
+.img-btn > img {
   display: block;
+}
+
+.img-btn:hover {
+  transform: scale(1.03);
+  background-color: rgba(255, 255, 255, 0.25);
 }

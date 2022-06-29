@@ -10,14 +10,27 @@
 .details_page_title {
   font-size: 48px;
   line-height: 200%;
+  padding-top: 20px;
 }
 
 .details_page_content {
   font-size: 40px;
   line-height: 150%;
-  text-indent: 16px;
+  padding-bottom: 20px;
+}
+
+.details_page_contact {
+  font-size: 40px;
+  line-height: 150%;
+  padding-left: 40px;
 }
 
 .icons {
   color: whitesmoke;
+  transition: 0.2s ease;
+}
+
+.icons:hover {
+  transform: scale(1.03);
+  color: rgba(255, 255, 255, 0.7);
 }

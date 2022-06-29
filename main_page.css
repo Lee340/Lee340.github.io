@@ -20,14 +20,21 @@
 }
 
 .main_page_portfolio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  border: 1px solid #634f46;
   display: flex;
   flex-direction: column;
   justify-content: left;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px;
+}
+
+.portfolio_btn_position {
+  display: flex;
+  gap: 16px;
+  align-items:center;
+}
+
+.portfolio_description {
+  padding: 16px;
 }
 
 .reference {
