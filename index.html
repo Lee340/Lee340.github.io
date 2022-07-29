@@ -1,155 +1,179 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+    />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Profile</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
-</head>
+  <body>
+    <div class="root">
+      <!------------------------landing page------------------------->
+      <div class="page landing_page">
+        <div class="typewriter_container">
+          <span class="text_l typewriter"><span>Hi, I am Boram.</span></span>
+        </div>
+        <div class="typewriter_container">
+          <span class="text_l typewriter accent-color"
+            ><span>Web Developer,</span></span
+          >
+        </div>
+        <div class="typewriter_container">
+          <span class="text_l typewriter"><span>Art Enthusiast.</span></span>
+        </div>
+        <script type="module">
+          const data = Array.from(document.querySelectorAll(".typewriter")).map(
+            (node) => [node, node.innerText]
+          );
+          data.forEach(([node]) => {
+            node.innerText = "";
+          });
 
-<body>
-  <div class="root">
-    <!------------------------landing page------------------------->
-    <div class="page landing_page">
-      <div class="typewriter_container">
-        <span class="text_l typewriter"><span>Hi, I am Boram.</span></span>
+          function typewrite(node, target) {
+            return new Promise((resolve) => {
+              let index = 0;
+              const interval = setInterval(() => {
+                if (index >= target.length) {
+                  setTimeout(() => {
+                    resolve();
+                  }, 200);
+                  clearInterval(interval);
+                } else {
+                  index += 1;
+                  node.innerText = target.slice(0, index);
+                }
+              }, 100);
+            });
+          }
+
+          for (const [node, target] of data) {
+            node.classList.add("typewriter-typing");
+            await typewrite(node, target);
+            node.classList.remove("typewriter-typing");
+          }
+        </script>
+        <a class="arrow-down-link" href="#section1">
+          <p>scroll</p>
+          <i class="fa-solid fa-angle-down"></i>
+        </a>
       </div>
-      <div class="typewriter_container">
-        <span class="text_l typewriter accent-color"><span>Web Developer,</span></span>
-      </div>
-      <div class="typewriter_container">
-        <span class="text_l typewriter"><span>Art Enthusiast.</span></span>
-      </div>
-      <script type="module">
-        const data = Array.from(document.querySelectorAll('.typewriter')).map(node => [node, node.innerText])
-        data.forEach(([node]) => {
-          node.innerText = ''
-        })
+      <!------------------------landing page------------------------->
 
-        function typewrite(node, target) {
-          return new Promise(resolve => {
-            let index = 0;
-            const interval = setInterval(() => {
-              if (index >= target.length) {
-                setTimeout(() => {
-                  resolve()
-                }, 200);
-                clearInterval(interval)
-              } else {
-                index += 1
-                node.innerText = target.slice(0, index)
-              }
-            }, 100);
-          })
-        }
+      <!-------------------------main page--------------------------->
+      <div class="page main_page" id="section1" alt="Ecriture by Seobo Park">
+        <div class="main_page_dialog">
+          <div class="main_page_cell">
+            <p class="text_s main_page_text">
+              I studied <strong>web development</strong> at the coding bootcamp, <strong>Le Wagon</strong> London.
+            </p>
+          </div>
+          <div class="main_page_cell">
+            <p class="text_s main_page_text">
+              I also completed my PhD in <strong>art history </strong>at the <strong>University of Edinburgh</strong>.
+            </p>
+          </div>
+          <div class="main_page_cell">
+            <a href="https://airbnb-lee340.herokuapp.com/" class="main_page_portfolio" target="_blank">
+              <div class="main_page_img_container" style="background-image: url('images/weekend.jpeg');"></div>
+              <div class="main_page_portfolio_description">
+                <h2>Weekend</h2>
+                <p>A platform that people could meet up with dogs.</p>
+              </div>
+            </a>
 
-        for (const [node, target] of data) {
-          node.classList.add("typewriter-typing")
-          await typewrite(node, target)
-          node.classList.remove("typewriter-typing")
-        }
-      </script>
-      <a class="arrow-down-link" href="#section1">
-        <p>scroll</p><i class="fa-solid fa-angle-down"></i>
-      </a>
+            <a href="https://airbnb-lee340.herokuapp.com/" class="main_page_portfolio" target="_blank">
+              <div class="main_page_img_container" style="background-image: url('images/planit.png');"></div>
+              <div class="main_page_portfolio_description">
+                <h2>Planit</h2>
+                <p>A platform that people could meet up with dogs.</p>
+              </div>
+            </a>
 
-    </div>
-    <!------------------------landing page------------------------->
-
-    <!-------------------------main page--------------------------->
-    <div class="page main_page" id="section1" style="background-image: url('images/seobo.jpeg')"
-      alt="Ecriture by Seobo Park">
-      <div class="main_page_cell">
-        <p class="text_s main_page_text">I studied<br><strong>web development</strong><br>
-          at the coding bootcamp,<br><strong>Le Wagon</strong> London.
-        </p>
-      </div>
-
-      <div class="main_page_cell">
-        <p class="text_s main_page_text">I also completed <br>my PhD in <strong>art history</strong><br> at the<br>
-          <strong>University of Edinburgh</strong>.
-        </p>
-      </div>
-      <div class="main_page_cell">
-        <div class="main_page_portfolio">
-          <div class="portfolio_btn_position">
-            <h2>· Project 1</h2>
-            <a class="img-btn" href="https://airbnb-lee340.herokuapp.com/" target="_blank">
-              <img height="56" width="112" alt="woof woof logo" src="images/woof_logo.png" />
+            <a href="https://airbnb-lee340.herokuapp.com/" class="main_page_portfolio" target="_blank">
+              <div class="main_page_img_container" style="background-image: url('images/woof.jpeg');"></div>
+              <div class="main_page_portfolio_description">
+                <h2>Woofwoof</h2>
+                <p>A platform that people could meet up with dogs.</p>
+              </div>
             </a>
           </div>
-          <p class="text_xs portfolio_description">A platform that people could meet up with dogs.</p>
+
+
+        </div>
+
+        <a class="arrow-down-link" href="#section2">
+          <p>scroll</p>
+          <i class="fa-solid fa-angle-down"></i>
+        </a>
+        <div class="reference">
+          <p>
+            Seobo Park, <em>Ecriture No.080313</em>, 2008, mixed media with
+            Korean paper on canvas, 165cmx260cm, Seobo Foundation
+          </p>
         </div>
       </div>
 
-      <div class="main_page_cell">
-        <div class="main_page_portfolio">
-          <div class="portfolio_btn_position">
-            <h2>· Project 2</h2>
-            <a class="img-btn" href="http://www.planit.lol" target="_blank">
-              <img height="56" width="112" alt="planit logo" src="images/planit_logo.png" />
-            </a>
-          </div>
-          <p class="text_xs portfolio_description">A web app designed to help people organise team events.</p>
-        </div>
-      </div>
+      <!--------------------------main page------------------------------->
 
-      <a class="arrow-down-link" href="#section2">
-        <p>scroll</p><i class="fa-solid fa-angle-down"></i>
-      </a>
-      <div class="reference">
-        <p>
-          Seobo Park, <em>Ecriture No.080313</em>, 2008, mixed media with Korean paper on canvas, 165cmx260cm, Seobo
-          Foundation
+      <!--------------------------details page---------------------------->
+      <div class="page details_page" id="section2">
+        <h2 class="details_page_title">More about me</h2>
+        <p class="details_page_content">
+          I started to develop an interest in coding for the last few years and
+          joined a <mark class="accent-color">coding bootcamp</mark> in spring
+          2022. Before getting into the coding world, I worked in art industry
+          and studied art history for about ten years from undergraduate to PhD.
         </p>
+        <p class="details_page_content">
+          During my bootcamp, I mainly studied
+          <mark class="accent-color">HTML, CSS, JavaScript, Ruby</mark> and
+          <mark class="accent-color">Ruby on Rails</mark> and taught myself
+          <mark class="accent-color">React</mark> and
+          <mark class="accent-color">TypeScript</mark>. I not only have learnt a
+          lot about programming also gained some experience in
+          <mark class="accent-color">teamwork</mark> and how to cooperate with
+          others for creating a product using different technologies together.
+        </p>
+        <br />
+
+        <h2 class="details_page_title">Contact me</h2>
+        <ul class="details_page_contact">
+          <li>
+            LinkedIn
+            <a
+              href="https://www.linkedin.com/in/boramlee340/"
+              target="_blank"
+              class="icons social-icon text_s"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li>
+            GitHub
+            <a
+              href="https://github.com/Lee340"
+              target="_blank"
+              class="icons social-icon text_s"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>boramlee340@gmail.com <i class="fa-solid fa-envelope"></i></li>
+        </ul>
       </div>
     </div>
-
-    <!--------------------------main page------------------------------->
-
-    <!--------------------------details page---------------------------->
-    <div class="page details_page" id="section2">
-      <h2 class="details_page_title">More about me</h2>
-      <p class="details_page_content">
-        I started to develop an interest in coding for the last few years and joined a <mark class="accent-color">coding bootcamp</mark> in spring 2022. Before getting into the coding world, I worked in art industry and studied art history for about ten years from undergraduate to PhD.
-      </p>
-      <p class="details_page_content">During my bootcamp, I mainly studied <mark class="accent-color">HTML, CSS,
-          JavaScript, Ruby</mark> and <mark class="accent-color">Ruby on Rails</mark> and taught myself <mark
-          class="accent-color">React</mark> and
-        <mark class="accent-color">TypeScript</mark>. I not only have learnt a lot about programming also gained some
-        experience in <mark class="accent-color">teamwork</mark> and how to
-        cooperate with others for creating a product using different technologies together.
-      </p>
-      <br>
-
-      <h2 class="details_page_title">Contact me</h2>
-      <ul class="details_page_contact">
-        <li>
-          LinkedIn
-          <a href="https://www.linkedin.com/in/boramlee340/" target="_blank" class="icons social-icon text_s">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          GitHub
-          <a href="https://github.com/Lee340" target="_blank" class="icons social-icon text_s">
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </li>
-        <li>
-          boramlee340@gmail.com <i class="fa-solid fa-envelope"></i>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
 
 <!--------------------------details page---------------------------->
